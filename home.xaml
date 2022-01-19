@@ -1,0 +1,25 @@
+﻿<Page x:Class="MossFrp.home"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MossFrp" xmlns:hc="https://handyorg.github.io/handycontrol"
+      mc:Ignorable="d" 
+      d:DesignHeight="705" d:DesignWidth="1280"
+      Title="主页">
+
+    <Grid Height="705" Width="1280">
+        <Label Content="欢迎使用 MossFrp" Height="48" VerticalAlignment="Top" Width="169" HorizontalAlignment="Left" Margin="5,18,0,0" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="{DynamicResource PrimaryBrush}" FontSize="18" FontFamily="Microsoft YaHei UI Light"/>
+        <hc:RunningBlock Height="70"  x:Name="bd"  Content="正在加载公告" Margin="185,8,273,595" RenderTransformOrigin="0.5,0.5">
+        </hc:RunningBlock>
+        <hc:GotoTop Content="GotoTop" Height="35" Width="36" Margin="1187,594,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <Border x:Name="nologin" BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Height="100" Margin="18,116,0,0" VerticalAlignment="Top" Width="761" CornerRadius="10,10,10,10">
+            <Grid>
+                <Label Content="请您登录" HorizontalAlignment="Left" Height="41" Margin="6,14,0,0" VerticalAlignment="Top" Width="112" FontSize="16" BorderBrush="{x:Null}"/>
+                <Label Content="登录后才可使用隧道等功能" HorizontalAlignment="Left" Height="29" Margin="20,46,0,0" VerticalAlignment="Top" Width="166" BorderBrush="{x:Null}" Foreground="{DynamicResource SecondaryTextBrush}"/>
+                <Button x:Name="moss" Style="{StaticResource ButtonPrimary}" Content="使用 MossFrp 账号登录" HorizontalAlignment="Left" Height="42" Margin="310,0,0,0" Width="200" FontFamily="Microsoft YaHei UI Light" Click="moss_Click"/>
+                <Button x:Name="Oauth"  Content="使用 CrabAPI 账号登录" HorizontalAlignment="Left" Height="42" Margin="537,0,0,0" Width="200" FontFamily="Microsoft YaHei UI Light" Click="Oauth_Click"/>
+            </Grid>
+        </Border>
+    </Grid>
+</Page>
